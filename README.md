@@ -116,6 +116,8 @@ validaciones, navegación y consumo de servicios REST.
 
 ---
 
+
+
 # 7. Arquitectura y organización del proyecto
 
 El proyecto utiliza una organización basada en componentes, modelos,
@@ -123,7 +125,11 @@ servicios y utilidades.
 
 La estructura principal es:
 
+
 ```text
+
+
+
 src/app/
 │
 ├── components/
@@ -146,14 +152,15 @@ src/app/
 ├── app.component.html
 ├── app.module.ts
 └── app-routing.module.ts
-
+```
 
 LINK DE LA EXPOSICION 
 
 https://youtu.be/QpFh0WWCBLI
 
-//* Profesor buenas noches, le escribo esto a las 19:20hrs del dia 22/09/26, para serle sincero, no pude ingresar a las clases previas por motivos de trabajo, problemas de la casa, asi mismo no pude conseguir un grupo para realizar la PA1, quisiera pedirle de favor si me podria considerar por esta ocacion la actividad, hace un par de horas se me cerro el acceso para poder subir la actividad por no pertenecer a ningun grupo. Asi mismo se lo envio mediante su correo. 
+Profesor buenas noches, le escribo esto a las 19:20hrs del dia 22/09/26, para serle sincero, no pude ingresar a las clases previas por motivos de trabajo, problemas de la casa, asi mismo no pude conseguir un grupo para realizar la PA1, quisiera pedirle de favor si me podria considerar por esta ocacion la actividad, hace un par de horas se me cerro el acceso para poder subir la actividad por no pertenecer a ningun grupo. Asi mismo se lo envio mediante su correo. 
 
 de antemano le agradesco si llega a leer esto. 
 
-Saludos cordiales //*
+Saludos cordiales 
+
