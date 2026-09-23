@@ -1,0 +1,38 @@
+<h2>Datos obtenidos desde API REST</h2>
+
+<div *ngIf="cargando">
+  <p>Cargando información...</p>
+</div>
+
+<div *ngIf="error">
+  <p>No se pudo obtener la información de la API.</p>
+</div>
+
+<div *ngIf="!cargando && !error">
+
+  <p>
+    Los siguientes datos fueron obtenidos mediante
+    HttpClient desde una API REST.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Usuario</th>
+        <th>Correo</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <td>{{ usuario.id }}</td>
+        <td>{{ usuario.name }}</td>
+        <td>{{ usuario.username }}</td>
+        <td>{{ usuario.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

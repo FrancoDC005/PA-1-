@@ -1,0 +1,25 @@
+h2 {
+  text-align: center;
+  margin-top: 30px;
+}
+
+p {
+  text-align: center;
+}
+
+table {
+  width: 80%;
+  margin: 25px auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  font-weight: bold;
+}

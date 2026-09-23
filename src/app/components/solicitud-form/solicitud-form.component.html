@@ -1,0 +1,106 @@
+<h2>Nueva Solicitud Académica</h2>
+
+<form [formGroup]="solicitudForm" (ngSubmit)="enviarSolicitud()">
+
+  <div>
+    <label for="nombre">Nombre completo:</label>
+
+    <input
+      id="nombre"
+      type="text"
+      formControlName="nombre"
+    >
+
+    <small
+      *ngIf="solicitudForm.get('nombre')?.invalid &&
+             solicitudForm.get('nombre')?.touched"
+    >
+      El nombre es obligatorio y debe tener al menos 3 caracteres.
+    </small>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="codigo">Código de estudiante:</label>
+
+    <input
+      id="codigo"
+      type="text"
+      formControlName="codigo"
+    >
+
+    <small
+      *ngIf="solicitudForm.get('codigo')?.invalid &&
+             solicitudForm.get('codigo')?.touched"
+    >
+      El código debe contener exactamente 8 números.
+    </small>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="correo">Correo:</label>
+
+    <input
+      id="correo"
+      type="email"
+      formControlName="correo"
+    >
+
+    <small
+      *ngIf="solicitudForm.get('correo')?.invalid &&
+             solicitudForm.get('correo')?.touched"
+    >
+      Ingresa un correo electrónico válido.
+    </small>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="tipo">Tipo de solicitud:</label>
+
+    <select id="tipo" formControlName="tipo">
+      <option value="">Seleccione una opción</option>
+      <option value="constancia">Constancia</option>
+      <option value="retiro_curso">Retiro de curso</option>
+      <option value="reincorporacion">Reincorporación</option>
+      <option value="convalidacion">Convalidación</option>
+    </select>
+
+    <small
+      *ngIf="solicitudForm.get('tipo')?.invalid &&
+             solicitudForm.get('tipo')?.touched"
+    >
+      Selecciona un tipo de solicitud.
+    </small>
+  </div>
+
+  <br>
+
+  <div>
+    <label for="descripcion">Descripción:</label>
+
+    <textarea
+      id="descripcion"
+      rows="5"
+      formControlName="descripcion"
+    ></textarea>
+
+    <small
+      *ngIf="solicitudForm.get('descripcion')?.invalid &&
+             solicitudForm.get('descripcion')?.touched"
+    >
+      La descripción es obligatoria y debe tener al menos 10 caracteres.
+    </small>
+  </div>
+
+  <br>
+
+  <button type="submit">
+    Registrar solicitud
+  </button>
+
+</form>

@@ -1,0 +1,41 @@
+<h2>Solicitudes Académicas</h2>
+
+<p>
+  Total de solicitudes: {{ solicitudes.length }}
+</p>
+
+<div *ngIf="solicitudes.length > 0; else sinSolicitudes">
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Estudiante</th>
+        <th>Código</th>
+        <th>Correo</th>
+        <th>Tipo</th>
+        <th>Descripción</th>
+        <th>Estado</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let solicitud of solicitudes">
+        <td>{{ solicitud.id }}</td>
+        <td>{{ solicitud.estudiante.nombre }}</td>
+        <td>{{ solicitud.estudiante.codigo }}</td>
+        <td>{{ solicitud.estudiante.correo }}</td>
+        <td>{{ solicitud.tipo }}</td>
+        <td>{{ solicitud.descripcion }}</td>
+        <td>{{ solicitud.estado }}</td>
+        <td>{{ solicitud.fecha | date:'dd/MM/yyyy' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+<ng-template #sinSolicitudes>
+  <p>No existen solicitudes registradas.</p>
+</ng-template>
